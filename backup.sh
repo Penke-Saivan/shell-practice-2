@@ -53,7 +53,7 @@ if [ ! -z "$FILES" ]; then
     echo "Files Found:$FILES"
     #Timestampis for ZIP file name 2025-09-09-02-06
     TIMESTAMP=$(date +%F-%H-%M)
-    ZIP_FILE_NAME= "$DEST_DIR/app-logs-$TIMESTAMP.zip"
+    ZIP_FILE_NAME="$DEST_DIR/app-logs-$TIMESTAMP.zip"
     echo "ZipFIle name is :$ZIP_FILE_NAME"
     echo $FILES | zip -@ $ZIP_FILE_NAME
 
