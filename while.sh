@@ -1,4 +1,4 @@
-count=10
+count=5
 while [ $count -gt 0 ]
 do
   echo "Time left: $count"
@@ -7,3 +7,9 @@ do
 done
 
 echo "Times up!"
+
+while IFS= read -r line; do
+    # Process each line here
+    echo "Processing line: $line"
+
+done < script-1.sh
