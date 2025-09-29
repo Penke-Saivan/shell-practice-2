@@ -39,6 +39,6 @@ fi
 #check destination directory exist
 
 if [ ! -d $2 ]; then
-     echo -e "$R Source $SOURCE_DIR does not exist $N"
+     echo -e "$R Source $DEST_DIR does not exist $N"
      exit 1
 fi
