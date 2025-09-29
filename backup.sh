@@ -50,7 +50,7 @@ FILES=$(find $SOURCE_DIR -name "*.log" -type f -mtime +$DAYS)
 #if the find vaiable is empty or not
 
 if [ ! -z "$FILES" ]; then
-    echo "Files Found"
+    echo "Files Found:$FILES"
     #Timestampis for ZIP file name 2025-09-09-02-06
     TIMESTAMP=$(date +%F-%H-%M)
     ZIP_FILE_NAME= "$DEST_DIR/app-logs-$TIMESTAMP.zip"
