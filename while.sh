@@ -1,3 +1,4 @@
+count=10
 while [ $count -gt 0 ]
 do
   echo "Time left: $count"
