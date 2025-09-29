@@ -42,3 +42,15 @@ if [ ! -d $2 ]; then
      echo -e "$R Source $DEST_DIR does not exist $N"
      exit 1
 fi
+
+# find the files which are 14 days old
+
+FILES=$(find $SOURCE_DIR -name "*.log" -type f -mtime +$DAYS)
+
+#if the find vaiable is empty or not
+
+if [ ! -z "$FILES" ]; then
+    echo "Files Found"
+else
+    echo -e "No files to archive....$Y SKIPPING..$N"
+fi
