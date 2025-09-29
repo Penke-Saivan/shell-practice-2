@@ -28,3 +28,17 @@ USAGE(){
 if [ $# -lt 2 ]; then
     USAGE
 fi
+
+#check source directory exist
+
+if [ ! -d $1 ]; then
+     echo -e "$R Source $SOURCE_DIR does not exist $N"
+     exit 1
+fi
+
+#check destination directory exist
+
+if [ ! -d $2 ]; then
+     echo -e "$R Source $SOURCE_DIR does not exist $N"
+     exit 1
+fi
